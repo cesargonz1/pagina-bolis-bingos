@@ -177,7 +177,7 @@ body{
    
     .gallery-description {
         position: absolute;
-        bottom: -100%;
+        bottom: 100%;
         left: 0;
         width: 60%;
         background-color: var(--color-terciario);
