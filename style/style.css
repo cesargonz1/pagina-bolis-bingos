@@ -222,6 +222,10 @@ body{
         .presentacion__contenido{
             width: auto;
         }
+         .imagen{
+    
+            height: 50%;
+        }
     }
 
         
