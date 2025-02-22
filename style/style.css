@@ -230,12 +230,12 @@ body{
     @media (max-width: 1200px){
 
         .header{
-            padding: 15% 2% 15% 25%;
+            padding: 5% 2% 5% 5%;
         }
 
         .header__menu{
             justify-content: center;
-            padding: 20%;
+            gap: 5%;
 
 
         }
@@ -255,6 +255,7 @@ body{
             height: 50%;
         }
     }
+    
 
         
     
