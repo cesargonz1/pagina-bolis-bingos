@@ -38,6 +38,12 @@ body{
 
     }
 
+    .body__mayoreo{
+        background-color: var(--color-quinto);
+        color: var(--color-secundario);
+        box-sizing: border-box;
+    }
+
     .presentacion__contenido__titulo__menu{
 
         font-size: 2.25rem;
@@ -238,6 +244,8 @@ body{
             flex-direction: column;
             padding: 5%;
         }
+
+        
 
         .presentacion__contenido{
             width: auto;
