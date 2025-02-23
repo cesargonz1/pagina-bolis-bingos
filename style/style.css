@@ -45,16 +45,38 @@ body{
     }
 
     .presentacion__contenido__titulo__menu{
-
         font-size: 2.25rem;
         font-family: var(--fuente-krona);
-        color: rgb(15, 124, 15)
+       color: var(--color-cuarto);
+        width: 100%;
+        padding: 5px;
+
+    }
+    .sabores__agua{
+        font-size: 2.25rem;
+        font-family: var(--fuente-krona);
+        color: rgb(15, 124, 15);
+        justify-content: center;
+        display: flex;
+
 
 
     }
+    .Sabores__frappes{
+        font-size: 2.25rem;
+        font-family: var(--fuente-krona);
+        color: rgb(15, 124, 15);
+        justify-content: center;
+        display: flex;
+
+    }
+
     .presentacion__contenido__texto__menu{
-        font-size: 2rem;
-        color: var(--color-cuarto);
+        font-size: 2.25rem;
+        font-family: var(--fuente-krona);
+        color: rgb(15, 124, 15);
+        justify-content: center;
+        display: flex;
     }
 
    .header {
@@ -110,12 +132,15 @@ body{
         padding: 5% 6%; 
         justify-content: space-between;
         gap: 82px;
+        text-align: center;
+
+        
         
     }
 
 
     .presentacion__contenido {
-        width: 50%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         gap: 40px;

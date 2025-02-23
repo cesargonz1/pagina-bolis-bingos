@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
     <link rel="stylesheet" href="./style/style.css">
+    <style>
+        @keyframes moverTitulo {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            50% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+        h1 {
+            font-size: 2em;
+            animation: moverTitulo 5s infinite;
+            text-align: center;
+        }
+    </style>
 
 </head>
 <body class="body__menu">
@@ -23,7 +45,7 @@
             <h1 class="presentacion__contenido__titulo__menu">
                 Bienvenido conoce nuestro menú  </h1>
             <p class="presentacion__contenido__texto__menu">
-                podras encontrar los siguientes sabores 
+                podras encontrar los siguientes sabores de Bolis
             </p>
 
             <div class="gallery-item">
@@ -69,7 +91,31 @@
                     <p>BOLI DE OREO $25</p>
                 </div>
             </div>
-            
+
+            <h2 class="sabores__agua">Sabores de agua 
+
+            </h2>
+
+            <div class="gallery-item">
+                <img src="./assets/boli picafresa.jpg"
+                    alt="Descripción de la foto 3">
+                <div class="gallery-description">
+                    <p>BOLI DE PICAFRESA $25</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./assets/boli pulparindo.jpg"
+                    alt="Descripción de la foto 2">
+                <div class="gallery-description">
+                    <p>BOLI DE Pulparindo $25</p>
+                </div>
+            </div>
+
+            <h3 class="Sabores__frappes">
+                Sabores de frappes
+            </h3>
+
             <div class="gallery-item">
                 <img src="./assets/boli picafresa.jpg"
                     alt="Descripción de la foto 3">
@@ -79,7 +125,7 @@
             </div>
         </div>
         
-    </section>
+        </section>
 
 </main>
         <footer class="footer">
