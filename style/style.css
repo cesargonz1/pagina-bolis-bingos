@@ -190,6 +190,10 @@ body{
       
 
     }
+    .imagen__mayoreo{
+        width: 50%;
+        height: 450px;
+    }
  
    
     .menu{
@@ -272,10 +276,16 @@ body{
     
             height: 50%;
         }
+        .imagen__mayoreo{
+            width: 90%;
+            height: 50%;
+
+            padding: 0% 0% 5% 0%;
+        }
 
         .presentacion__mayoreo{
             flex-direction: column-reverse;
-            padding: 5% 0% 15% 5%;
+            padding: 5% 0% 25% 5%;
         }
     }
     
