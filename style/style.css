@@ -290,7 +290,7 @@ body{
         
 
         .presentacion__contenido{
-            width: auto%;
+            width: auto;
         }
         
         
@@ -311,7 +311,7 @@ body{
             padding: 5% 0% 25% 5%;
         }
         .gallery-item img {
-            height: auto%
+            height: auto;
 
 
     }
