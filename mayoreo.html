@@ -7,18 +7,30 @@
     <link rel="stylesheet" href="./style/style.css">
 
     <style>
-        @keyframes fadeInOut {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
+        @keyframes moverYEscalar {
+            0% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.2); }
+            100% { transform: translateY(0) scale(1); }
         }
 
         h1 {
             font-size: 2em;
-            animation: fadeInOut 3s ease-in-out infinite;
+            animation: moverYEscalar 3s ease-in-out infinite;
             text-align: center;
         }
     </style>
+
+<style>
+    img {
+        width: 300px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    img:hover {
+        transform: scale(1.2);
+    }
+</style>
 
 
 </head>

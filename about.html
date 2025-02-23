@@ -28,6 +28,20 @@
         }
     </style>
 
+<style>
+    @keyframes desplazarLetras {
+        0% { letter-spacing: 1px; }
+        50% { letter-spacing: 10px; }
+        100% { letter-spacing: 1px; }
+    }
+
+    h2, h3 {
+        font-size: 3em;
+        animation: desplazarLetras 2s infinite;
+        text-align: center;
+    }
+</style>
+
 </head>
 <body class="body__menu">
     <header class="header">
@@ -44,9 +58,9 @@
         <section class="presentacion__contenido">
             <h1 class="presentacion__contenido__titulo__menu">
                 Bienvenido conoce nuestro menú  </h1>
-            <p class="presentacion__contenido__texto__menu">
-                podras encontrar los siguientes sabores de Bolis
-            </p>
+           
+                <h2 class="presentacion__contenido__texto__menu">
+                    sabores de Bolis</h2>
 
             <div class="gallery-item">
                 <img src="./assets/boli coco.jpg"
