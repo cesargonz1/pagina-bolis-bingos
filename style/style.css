@@ -226,7 +226,7 @@ body{
     }
 
     .gallery {
-        display: grid;
+        display: block;
         gap: 15px;
         padding: 20px;
     }
@@ -234,6 +234,8 @@ body{
     .gallery-item {
       
         border-radius: var(--border-radius);
+        display: block;
+        width: auto;
     }
    
     .gallery-description {
@@ -248,10 +250,6 @@ body{
         border-radius: 0 0 var(--border-radius) var(--border-radius);
     }
 
-    .gallery-item:hover {
-        transform: scale(1.05);
-        
-    }
     
     .gallery-item img {
         width: 60%; 
@@ -292,7 +290,7 @@ body{
         
 
         .presentacion__contenido{
-            width: auto;
+            width: auto%;
         }
         
         
@@ -317,6 +315,7 @@ body{
 
 
     }
+    
     
     
     }
