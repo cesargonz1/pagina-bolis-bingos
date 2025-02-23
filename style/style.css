@@ -240,7 +240,7 @@ body{
     }
    
     .gallery-description {
-        position: auto;
+        position: absolute;
         bottom: 100%;
         left: 0;
         width: 60%;
