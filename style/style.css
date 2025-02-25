@@ -34,7 +34,7 @@ body{
 
     .body__menu{
         background-color: var(--color-terciario);
-        box-sizing: border-box;
+       box-sizing: border-box;
 
     }
 
@@ -136,6 +136,15 @@ body{
         
         
     }
+    .presentacion__menu{
+        display: flex;
+        align-items: center;
+        padding: 5% 6%; 
+        justify-self: auto;
+        text-align: center;
+        width: 100%;
+
+    }
 
 
     .presentacion__contenido {
@@ -143,8 +152,12 @@ body{
         display: flex;
         flex-direction: column;
         gap: 40px;
+        
+
 
     }
+    
+    
 
 
     .presentacion__contenido__titulo{
@@ -233,7 +246,7 @@ body{
 
     .gallery-item {
       
-        border-radius: var(--border-radius);
+        border-radius: 20px;
         display: block;
         width: auto;
     }
@@ -246,23 +259,27 @@ body{
         color: var(--color-secundario);
         padding: 10px;
         text-align: center;
+        font-size: 1.5rem;
       
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        border-radius: 0px 0px 20px 20px ;
     }
 
     
     .gallery-item img {
-        width: 60%; 
-        height: 400px;
+        width: 59.8%; 
+        height: 450px;
         object-fit: cover;
         display: block;
-        border-radius: var(--border-radius);
+        border-radius: 20px 20px 0px 00px;
+       
     }
 
-    .gallery-item:hover .gallery-description {
+    .gallery-item:hover .gallery-description  {
         bottom: 0;
+        background-color: var(--colo-primario);
     }
-
+   
+   
 
    
 
@@ -280,20 +297,24 @@ body{
             gap: 5%;
 
 
+
         }
 
         .presentacion{
             flex-direction: column;
             padding: 5%;
         }
+        .presentacion__menu{
+            flex-direction: column;
+            padding: 5%;
 
+        }
         
 
         .presentacion__contenido{
             width: auto;
         }
-        
-        
+      
         .imagen{
     
             height: 50%;
@@ -311,8 +332,17 @@ body{
             padding: 5% 0% 25% 5%;
         }
         .gallery-item img {
-            height: auto;
+            width: 90%;
 
+
+    }
+    .gallery-description {
+          width: 90%;
+       
+            font-size: 2em;
+            animation: moverYEscalar 3s ease-in-out infinite;
+            text-align: center;
+        
 
     }
     
