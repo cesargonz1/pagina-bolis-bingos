@@ -3,75 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolis Bingos</title>
-    <link rel="stylesheet" href="./style/style.css">
-
-    <style>
-        @keyframes sombraTitulo {
-            0% { text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
-            50% { text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7); }
-            100% { text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
-        }
-
-        main {
-            font-size: 2em;
-            animation: sombraTitulo 2s infinite;
-            text-align: center;
-        }
-    </style>
-
-<style>
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
-
-    img {
-        width: auto;
-        height: auto;
-        animation: fadeIn 4s ease-in-out;
-    }
-</style>
-
-
-
-</head>
-<body>
-    <header class="header">
-        <nav class="header__menu">
-            <a class="header__sobre__mi" href="index.html"> home </a>
-            <a class="header__sobre__mi" href="about.html"> Nuestro Menu </a>
-            <a class="header__sobre__mi" href="mayoreo.html"> mayoreo </a>
-
-
-        </nav>
-    </header>
+    <title>pagina de bolis</title>
+    <link rel="stylesheet" href="./style.css">
  
-    <main class="presentacion"> 
-        <img class="imagen" src="./assets/imagen inicio.jpg" alt="imagen de menu" >
-
-        <section class="presentacion__contenido">
-            <h1 class="presentacion__contenido__titulo">
-
-                Bienvenidos a  <strong class="tituloDestaque">  BolisBingos</strong></h1>
-            <p class="presentacion__contenido__texto">
-                En este lugar podras encontrar productos de alta calidad, tanto en bolis y frappes, <strong>TE GUSTARIA PROBARLOS?</strong>
-            </p>
-            <div class="presentacion__enlaces">
-
-                <h2 class="presentacion__enlaces__subtitulo">Accede a mis redes</h2>
-
-                <a class="presentacion__link__enlace" href="https://wa.me/5215560800083">
-                    <img src="./assets/-whatsapp.png">whatsapp</a>
-                <a class="presentacion__link__enlace" href="https://www.facebook.com/share/1Py9y81VwH/">
-                    <img src="./assets/-facebook.png" >facebook</a>
-            </div>          
-               
-        </section>
-    </main>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     
-        <footer class="footer">
-            <p>Encargados Cesar Gonzalez y Jennifer Cervantes</p>
-        </footer>
+</head>
+ 
+
+<body class="dashboard">
+    <header class="header">
+        <h1 class="titulo">BIENVENIDOS A BOLIS BINGOS</h1>
+         
+        <img src="./assets/bolis.jpg" alt="presentacion de bolis", width="500PX">
+    
+     </header>
+   
+ 
+    
+  <main>
+     <!-- Botón de whatssap-->
+     <button id="logoutButton" title="Whatsapp">
+        
+        <a class="presentacion__link__enlace" href="https://wa.me/5215560800083">
+            <img src="./assets/-whatsapp.png"></a>
+     </button>
+
+     <button id="toggleDarkMode" class="floating-button" title="Modo">
+        <i class="ri-sun-line"></i>
+     </button>
+
+     <section id="inicio" class="content-section-active">
+       
+        
+        <h2 class="nuestro__menu">NUESTRO MENU</h2>
+
+        <!-- Galería de Fotos -->
+        <div class="gallery">
+            <!-- Foto 1 -->
+            <div class="gallery-item">
+                <img src="./assets/boli coco.jpg"
+                    alt="Descripción de la foto 1">
+                <div class="gallery-description">
+                    <p>BOLI DE COCO</p>
+                </div>
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="gallery-item">
+                <img src="./assets/boli gansito.jpg"
+                    alt="Descripción de la foto 2">
+                <div class="gallery-description">
+                    <p>BOLI DE GANSITO </p>
+                </div>
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="gallery-item">
+                <img src="./assets/boli mazapan.jpg"
+                    alt="Descripción de la foto 3">
+                <div class="gallery-description">
+                    <p>BOLI DE MAZAPAN</p>
+                </div>
+            </div>
+            <!-- Foto 1 -->
+            <div class="gallery-item">
+                <img src="./assets/boli nutella.jpg"
+                    alt="Descripción de la foto 1">
+                <div class="gallery-description">
+                    <p>BOLI DE NUTELLA </p>
+                </div>
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="gallery-item">
+                <img src="./assets/boli oreo.jpg"
+                    alt="Descripción de la foto 2">
+                <div class="gallery-description">
+                    <p>BOLI DE OREO</p>
+                </div>
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="gallery-item">
+                <img src="./assets/boli picafresa.jpg"
+                    alt="Descripción de la foto 3">
+                <div class="gallery-description">
+                    <p>BOLI DE PICAFRESA</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./assets/boli pulparindo.jpg"
+                    alt="Descripción de la foto 3">
+                <div class="gallery-description">
+                    <p>BOLI DE PULPARINDO</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="content-section-active" >
+
+            <h3> frappes </h3>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="./assets/boli coco.jpg"
+                        alt="Descripción de la foto 1">
+                    <div class="gallery-description">
+                        <p>BOLI DE COCO</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./assets/boli coco.jpg"
+                        alt="Descripción de la foto 1">
+                    <div class="gallery-description">
+                        <p>BOLI DE COCO</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./assets/boli coco.jpg"
+                        alt="Descripción de la foto 1">
+                    <div class="gallery-description">
+                        <p>BOLI DE COCO</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./assets/boli coco.jpg"
+                        alt="Descripción de la foto 1">
+                    <div class="gallery-description">
+                        <p>BOLI DE COCO</p>
+                    </div>
+                </div>
+
+            </div>
+
+               
+                
+
+        </section>
+
+
+
+
+     </section>
+
+    </main>
+
+
+     <script src="app.js"></script>
+    
+    <footer class="footer"> <p>Encargados Cesar Gonzalez y Jennifer Cervantes</p>
+     </footer>
 </body>
 </html>

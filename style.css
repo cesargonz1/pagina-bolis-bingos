@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #219b9d; /* Rosa fuerte */
+    --color-secondary: #eeee; /* Rosa claro */
+    --color-background: #4c1f7a; /* Fondo claro */
+    --color-text: #edf4c2; /* Texto oscuro */
+    --color-text-light: white; /* Texto claro */
+    --color-border: #ff80ab; /* Borde gris */
+    --border-radius: 20px; /* Bordes curvos */
+    --sidebar-width: 250px; /* Ancho del sidebar */
+}
+
+
+.dark-mode{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    --color-border: #fff; /* Borde oscuro (modo oscuro) */
+    --color-primary: #000; /* Color principal (modo oscuro) */
+    --color-background: #fff; /* Fondo oscuro (modo oscuro) */
+
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.header {
+    padding: 0% 0% 0% 28%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+   
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+  
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+
+
+
+
+
+
+
+button {
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Alinea verticalmente al centro */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    transition: background-color 0.3s ease; /* Animación suave */
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    cursor: pointer;
+    border: none;
+}
+
+
+button:hover {
+    background-color: var(--color-secondary);
+}
+
+
+
+
+
+/* Estilos del Dashboard */
+.dashboard {
+    display: flex;
+    position: relative;
+    height: 100%;
+    flex: 1;  /* Esto hace que el contenido ocupe el espacio disponible y empuje el footer hacia abajo */
+
+}
+
+
+
+
+
+
+
+/* Contenido Principal */
+
+
+
+
+.content-section-active {
+    opacity: 1;
+    transform: translateY(0);
+    font-size: 30px;
+    text-align: center;
+   padding: 5% 0% 0% 0% ;    
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Botón Flotante de Modo Oscuro */
+.floating-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* Asegura que el botón se quede encima de todos los demás elementos */
+}
+
+
+.floating-button:hover, #logoutButton:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón Flotante de whatssap */
+#logoutButton{
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    background-color: orange;
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* Asegura que el botón se quede encima de todos los demás elementos */
+}
+#logoutButton:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.1);
+}
+.presentacion__link__enlace{
+    width: 50px; 
+      
+    padding: 100%;
+    display: flex;
+    border-radius: 100% ;
+
+
+}
+.presentacion__link__enlace:hover{
+    background-color:  var(--color-terciario)
+
+}
+
+
+
+
+
+
+
+/*galeria*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10% 0% 0% ;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px #007796;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+.gallery-description {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: #ff8000   ;
+    color: var(--color-text-light);
+    padding: 10px;
+    text-align: center;
+    transition: bottom 0.3s ease;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.gallery-item:hover .gallery-description {
+    bottom: 0;
+}
+
+
+
+/* Estilos para la galería de fotos */
+
+
+.gallery img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer{
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0; /* Fija el footer al final */
+    text-align: center; /* Centrado del contenido del footer */
+    margin-top: auto; /* Si usas un flexbox en el contenedor principal */
+   }
+   
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+  @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+   
+
+  
+    
+
+/* Responsividad */
+@media (max-width: 768px) {
+
+   
+   
+    .dashboard{
+        display: flex;
+        width: 100%;
+    }
+
+    .header{
+        width: 100%;
+        height: 10%;
+        flex-direction: column;
+        font-size: 5px;
+        padding: 5% 15% ;
+        text-align: center;
+        display: flex;
+    }
+    img{
+      width:   250px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+
+}
+
+@media  (max-width: 1023px){
+ 
+
+    main {
+        margin-left: 0;
+        padding-top: 80px; /* Espacio para el botón de hamburguesa */
+    }
+
+   
+
+    .header{
+        width: 10px;
+    }
+}
