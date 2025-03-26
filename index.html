@@ -12,6 +12,23 @@
  
 
 <body class="dashboard">
+    
+      <!-- Formulario de login (solo para el administrador) -->
+      <div id="login-container">
+        <h2>Iniciar sesión como Administrador</h2>
+        <form id="login-form">
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+
+    <div id="menu-container" style="display: none;"></div>
+
     <header class="header">
         <h1 class="titulo">BIENVENIDOS A BOLIS BINGOS</h1>
          
@@ -26,12 +43,21 @@
      <button id="logoutButton" title="Whatsapp">
         
         <a class="presentacion__link__enlace" href="https://wa.me/5215560800083">
-            <img src="./assets/-whatsapp.png"></a>
+            <img src="./assets/-whatsapp.png" alt="whatssap"></a>
      </button>
+
+     <button id="face" class="floating-face"  title="facebook">
+        
+        <a class="presentacion__link__enlace" href="https://www.facebook.com/share/1Py9y81VwH/">
+            <img src="./assets/-facebook.png" alt="facebbok"></a>
+     </button>
+     
 
      <button id="toggleDarkMode" class="floating-button" title="Modo">
         <i class="ri-sun-line"></i>
      </button>
+
+     
 
      <section id="inicio" class="content-section-active">
        
@@ -46,6 +72,10 @@
                     alt="Descripción de la foto 1">
                 <div class="gallery-description">
                     <p>BOLI DE COCO</p>
+                    <span class="agotado" style="color: red; font-weight: bold;">AGOTADO</span> <!-- Agotado visible para todos -->
+                            <!-- Botones solo visibles para admin -->
+                            <button class="btn-agotado" onclick="marcarAgotado(0)" style="display: none;">Marcar como AGOTADO</button>
+                            <button class="btn-disponible" onclick="marcarDisponible(0)" style="display: none;">Marcar como DISPONIBLE</button>
                 </div>
             </div>
 
@@ -55,7 +85,9 @@
                     alt="Descripción de la foto 2">
                 <div class="gallery-description">
                     <p>BOLI DE GANSITO </p>
-                </div>
+                    <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                    <button class="btn-agotado" onclick="marcarAgotado(1)" style="display: none;">Marcar como AGOTADO</button>
+                    <button class="btn-disponible" onclick="marcarDisponible(1)" style="display: none;">Marcar como DISPONIBLE</button>                </div>
             </div>
 
             <!-- Foto 3 -->
@@ -64,7 +96,9 @@
                     alt="Descripción de la foto 3">
                 <div class="gallery-description">
                     <p>BOLI DE MAZAPAN</p>
-                </div>
+                    <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                    <button class="btn-agotado" onclick="marcarAgotado(2)" style="display: none;">Marcar como AGOTADO</button>
+                    <button class="btn-disponible" onclick="marcarDisponible(2)" style="display: none;">Marcar como DISPONIBLE</button>                </div>
             </div>
             <!-- Foto 1 -->
             <div class="gallery-item">
@@ -72,7 +106,9 @@
                     alt="Descripción de la foto 1">
                 <div class="gallery-description">
                     <p>BOLI DE NUTELLA </p>
-                </div>
+                    <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                    <button class="btn-agotado" onclick="marcarAgotado(3)" style="display: none;">Marcar como AGOTADO</button>
+                    <button class="btn-disponible" onclick="marcarDisponible(3)" style="display: none;">Marcar como DISPONIBLE</button>                </div>
             </div>
 
             <!-- Foto 2 -->
@@ -81,7 +117,9 @@
                     alt="Descripción de la foto 2">
                 <div class="gallery-description">
                     <p>BOLI DE OREO</p>
-                </div>
+                    <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                    <button class="btn-agotado" onclick="marcarAgotado(4)" style="display: none;">Marcar como AGOTADO</button>
+                    <button class="btn-disponible" onclick="marcarDisponible(4)" style="display: none;">Marcar como DISPONIBLE</button>                </div>
             </div>
 
             <!-- Foto 3 -->
@@ -90,7 +128,9 @@
                     alt="Descripción de la foto 3">
                 <div class="gallery-description">
                     <p>BOLI DE PICAFRESA</p>
-                </div>
+                    <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                    <button class="btn-agotado" onclick="marcarAgotado(5)" style="display: none;">Marcar como AGOTADO</button>
+                    <button class="btn-disponible" onclick="marcarDisponible(5)" style="display: none;">Marcar como DISPONIBLE</button>                </div>
             </div>
 
             <div class="gallery-item">
@@ -98,7 +138,28 @@
                     alt="Descripción de la foto 3">
                 <div class="gallery-description">
                     <p>BOLI DE PULPARINDO</p>
-                </div>
+                    <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                    <button class="btn-agotado" onclick="marcarAgotado(6)" style="display: none;">Marcar como AGOTADO</button>
+                    <button class="btn-disponible" onclick="marcarDisponible(6)" style="display: none;">Marcar como DISPONIBLE</button>                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./assets/boli pulparindo.jpg"
+                    alt="Descripción de la foto 3">
+                <div class="gallery-description">
+                    <p>BOLI DE PIÑA</p>
+                    <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                    <button class="btn-agotado" onclick="marcarAgotado(7)" style="display: none;">Marcar como AGOTADO</button>
+                    <button class="btn-disponible" onclick="marcarDisponible(7)" style="display: none;">Marcar como DISPONIBLE</button>                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/boli pulparindo.jpg"
+                    alt="Descripción de la foto 3">
+                <div class="gallery-description">
+                    <p>BOLI DE ROMPOPE</p>
+                    <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                    <button class="btn-agotado" onclick="marcarAgotado(8)" style="display: none;">Marcar como AGOTADO</button>
+                    <button class="btn-disponible" onclick="marcarDisponible(8)" style="display: none;">Marcar como DISPONIBLE</button>                </div>
             </div>
 
         </div>
@@ -109,35 +170,49 @@
 
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="./assets/boli coco.jpg"
+                    <img src="./assets/frappe de rompope.jpg"
                         alt="Descripción de la foto 1">
                     <div class="gallery-description">
-                        <p>BOLI DE COCO</p>
-                    </div>
+                        <p>FRAPPE DE GANSITO</p>
+                        <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                        <button class="btn-agotado" onclick="marcarAgotado(9)" style="display: none;">Marcar como AGOTADO</button>
+                        <button class="btn-disponible" onclick="marcarDisponible(9)" style="display: none;">Marcar como DISPONIBLE</button>                </div>                    </div>
                 </div>
 
                 <div class="gallery-item">
                     <img src="./assets/boli coco.jpg"
                         alt="Descripción de la foto 1">
                     <div class="gallery-description">
-                        <p>BOLI DE COCO</p>
-                    </div>
+                        <p>FRAPPE DE COCO</p>
+                        <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                        <button class="btn-agotado" onclick="marcarAgotado(10)" style="display: none;">Marcar como AGOTADO</button>
+                        <button class="btn-disponible" onclick="marcarDisponible(10)" style="display: none;">Marcar como DISPONIBLE</button>                </div>                    </div>
                 </div>
 
                 <div class="gallery-item">
                     <img src="./assets/boli coco.jpg"
                         alt="Descripción de la foto 1">
                     <div class="gallery-description">
-                        <p>BOLI DE COCO</p>
-                    </div>
+                        <p>FRAPPE DE ROMPOPE</p>
+                        <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                        <button class="btn-agotado" onclick="marcarAgotado(11)" style="display: none;">Marcar como AGOTADO</button>
+                        <button class="btn-disponible" onclick="marcarDisponible(11)" style="display: none;">Marcar como DISPONIBLE</button>                </div>                    </div>
                 </div>
 
                 <div class="gallery-item">
                     <img src="./assets/boli coco.jpg"
                         alt="Descripción de la foto 1">
                     <div class="gallery-description">
-                        <p>BOLI DE COCO</p>
+                        <p>FRAPPE DE MAZAPAN</p>
+                        <span class="agotado" style="display: none; color: red; font-weight: bold;">AGOTADO</span>
+                        <button class="btn-agotado" onclick="marcarAgotado(12)">Marcar como AGOTADO</button>
+                        <button class="btn-disponible" style="display: none;" onclick="marcarDisponible(12)">Marcar como DISPONIBLE</button>
                     </div>
+                </div>
+
+              
+                
+                    <!-- Puedes agregar más productos con sus respectivos botones -->
                 </div>
 
             </div>
@@ -154,10 +229,14 @@
 
     </main>
 
+</div>
 
-     <script src="app.js"></script>
+
+    
     
     <footer class="footer"> <p>Encargados Cesar Gonzalez y Jennifer Cervantes</p>
      </footer>
+     
+     <script src="app.js"></script>
 </body>
 </html>

@@ -134,7 +134,7 @@ button:hover {
 .floating-button {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 30px;
     background-color: var(--color-primary);
     color: var(--color-text-light);
     border: none;
@@ -159,8 +159,8 @@ button:hover {
 #logoutButton{
     position: fixed;
     top: 90px;
-    right: 20px;
-    background-color: orange;
+    right: 30px;
+    background-color: rgb(17, 253, 9);
     color: var(--color-text-light);
     border: none;
     border-radius: 50%;
@@ -173,6 +173,25 @@ button:hover {
     transition: background-color 0.3s, transform 0.3s;
     z-index: 1000; /* Asegura que el botón se quede encima de todos los demás elementos */
 }
+/* Botón Flotante de whatssap */
+.floating-face{
+    position: fixed;
+    top: 156px;
+    right: 30px;
+    background-color: rgb(31, 16, 240);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* Asegura que el botón se quede encima de todos los demás elementos */
+}
+
 #logoutButton:hover {
     background-color: var(--color-secondary);
     transform: scale(1.1);
@@ -191,6 +210,20 @@ button:hover {
 
 }
 
+.agotado {
+    color: red;
+    font-weight: bold;
+    display: none; /* Inicialmente el mensaje está oculto */
+}
+.btn-agotado {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.btn-agotado:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
 
 
 
@@ -205,6 +238,7 @@ button:hover {
     padding: 20px;
 }
 
+
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -213,6 +247,9 @@ button:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 10% 0% 0% ;
 }
+
+
+
 
 .gallery-item:hover {
     transform: scale(1.05);
